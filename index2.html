@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.text1 {
+			color: black;
+			font-family: kolya;
+			font-size: 40px;
+			margin: 0px
+		}
+		.cube {
+			background: red;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 1500px;
+			top: 450px;
+			transition: 1s;
+			border-radius: 100px
+		}
+		.cube1 {
+			background: red;
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			left: 300px;
+			top: 450px;
+			transition: 1s;
+			border-radius: 150px
+		}
+		.cube2 {
+			background: red;
+			width: 140px;
+			height: 140px;
+			position: absolute;
+			left: 350px;
+			top: 600px;
+			transition: 1s;
+			border-radius: 140px
+		}
+		.cube3 {
+			background: red;
+			width: 180px;
+			height: 180px;
+			position: absolute;
+			left: 350px;
+			top: 100px;
+			transition: 1s;
+			border-radius: 180px
+		}
+		.cube4 {
+			background: red;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 800px;
+			top: 770px;
+			transition: 1s;
+			border-radius: 200px
+		}
+
+		.cube5 {
+			background: red;
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			left: 500px;
+			top: 600px;
+			transition: 1s;
+			border-radius: 300px
+		}
+		.cube6 {
+			background: red;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 1300px;
+			top: 700px;
+			transition: 1s;
+			border-radius: 200px
+		}
+		.cube7 {
+			background: red;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 900px;
+			top: 300px;
+			transition: 1s;
+			border-radius: 100px
+		}
+		.cube8 {
+			background: red;
+			width: 110px;
+			height: 110px;
+			position: absolute;
+			left: 900px;
+			top: 650px;
+			transition: 1s;
+			border-radius: 110px
+		}
+		.cube9 {
+			background: red;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			left: 780px;
+			top: 10px;
+			transition: 1s;
+			border-radius: 50px
+		}
+		.cube10 {
+			background: red;
+			width: 70px;
+			height: 70px;
+			position: absolute;
+			left: 690px;
+			top: 350px;
+			transition: 1s;
+			border-radius: 70px
+		}
+		.cube11 {
+			background: red;
+			width: 130px;
+			height: 130px;
+			position: absolute;
+			left: 850px;
+			top: 400px;
+			transition: 1s;
+			border-radius: 130px
+		}
+		.cube12 {
+			background: red;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 1000px;
+			top: 10px;
+			transition: 1s;
+			border-radius: 100px
+		}
+		.cube13 {
+			background: red;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 1500px;
+			top: 20px;
+			transition: 1s;
+			border-radius: 100px
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Score: <span class="text1">0</span></h1>
+	<div style="" class="cube"></div>
+	<div style="" class="cube1"></div>
+	<div style="" class="cube2"></div>
+	<div style="" class="cube3"></div>
+	<div style="" class="cube4"></div>
+	<div style="" class="cube5"></div>
+	<div style="" class="cube6"></div>
+	<div style="" class="cube7"></div>
+	<div style="" class="cube8"></div>
+	<div style="" class="cube9"></div>
+	<div style="" class="cube10"></div>
+	<div style="" class="cube11"></div>
+	<div style="" class="cube12"></div>
+	<div style="" class="cube13"></div>
+
+<script type="text/javascript">
+	let cube = document.querySelector('.cube');
+	let cube1 = document.querySelector('.cube1');
+	let cube2 = document.querySelector('.cube2');
+	let cube3 = document.querySelector('.cube3');
+	let cube4 = document.querySelector('.cube4');
+	let cube5 = document.querySelector('.cube5');
+	let cube6 = document.querySelector('.cube6');
+	let cube7 = document.querySelector('.cube7');
+	let cube8 = document.querySelector('.cube8');
+	let cube9 = document.querySelector('.cube9');
+	let cube10 = document.querySelector('.cube10');
+	let cube11 = document.querySelector('.cube11');
+	let cube12 = document.querySelector('.cube12');
+	let cube13 = document.querySelector('.cube13');
+	let task = document.querySelector('.task');
+	let bullets = 0;
+
+	let left = 1500;
+
+
+	let moveCube = function() {
+		left = left - 4;
+		console.log(left)
+		cube.style.left = left + "px";
+	}
+
+	cube.onclick = function() {
+		cube.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left1 = 300;
+
+	let moveCube1 = function() {
+		left1 = left1 + 16;
+		console.log(left1)
+		cube1.style.left = left1 + "px";
+	}
+	cube1.onclick = function() {
+		cube1.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left2 = 350;
+
+	let moveCube2 = function() {
+		left2 = left2 - 5;
+		console.log(left2)
+		cube2.style.left = left2 + "px";
+	}
+	cube2.onclick = function() {
+		cube2.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left3 = 350;
+
+	let moveCube3 = function() {
+		left3 = left3 - 2;
+		console.log(left3)
+		cube3.style.left = left3 + "px";
+	}
+	cube3.onclick = function() {
+		cube3.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left4 = 800;
+	let height4 = 200;
+	let width4 = 200;
+
+	let moveCube4 = function() {
+		height4 = height4 - 5;
+		width4 = width4 - 5
+		left4 = left4 + 5;
+		console.log(left4);
+		cube4.style.left = left4 + "px";
+		cube4.style.height = height4 + "px";
+		cube4.style.width = width4 + "px"
+	}
+	cube4.onclick = function() {
+		cube4.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left5 = 500;
+
+	let moveCube5 = function() {
+		left5 = left5 + 2;
+		console.log(left5)
+		cube5.style.left = left5 + "px";
+	}
+	cube5.onclick = function() {
+		cube5.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left6 = 1300;
+
+	let moveCube6 = function() {
+		left6 = left6 + 5;
+		console.log(left6)
+		cube6.style.left = left6 + "px";
+	}
+	cube6.onclick = function() {
+		cube6.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left7 = 900;
+
+	let moveCube7 = function() {
+		left7 = left7 + 3;
+		console.log(left7)
+		cube7.style.left = left7 + "px";
+	}
+	cube7.onclick = function() {
+		cube7.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left8 = 900;
+
+	let moveCube8 = function() {
+		left8 = left8 - 5;
+		console.log(left8)
+		cube8.style.left = left8 + "px";
+	}
+	cube8.onclick = function() {
+		cube8.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left9 = 780;
+	let height9 = 50;
+	let width9 = 50;
+
+	let moveCube9 = function() {
+		left9 = left9 + 10;
+		height9 = height9 + 5;
+		width9 = width9 + 5;
+		console.log(left9)
+		cube9.style.left = left9 + "px";
+		cube9.style.height = height9 + "px";
+		cube9.style.width = width9 + "px"
+	}
+	cube9.onclick = function() {
+		cube9.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left10 = 690;
+
+	let moveCube10 = function() {
+		left10 = left10 + 5;
+		console.log(left10)
+		cube10.style.left = left10 + "px";
+	}
+	cube10.onclick = function() {
+		cube10.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left11 = 850;
+
+	let moveCube11 = function() {
+		left11 = left11 + 5;
+		console.log(left11)
+		cube11.style.left = left11 + "px";
+	}
+	cube11.onclick = function() {
+		cube11.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left12 = 1000;
+
+	let moveCube12 = function() {
+		left12 = left12 + 5;
+		console.log(left12)
+		cube12.style.left = left12 + "px";
+	}
+	cube12.onclick = function() {
+		cube12.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+
+	let left13 = 1500;
+
+	let moveCube13 = function() {
+		left13 = left13 - 5;
+		console.log(left13)
+		cube13.style.left = left13 + "px";
+	}
+	cube13.onclick = function() {
+		cube13.style.display = "none";
+		bullets = bullets + 1;
+		console.log(bullets);
+		document.querySelector('.text1').innerHTML = bullets;
+	}
+	
+	let ent = function() {
+		if(bullets==14) {
+		alert("YOU WIN")
+		}
+		else{
+			alert("YOU LOSE")
+		}
+	}
+
+	setInterval(moveCube,1000);
+	setInterval(moveCube1,1000);
+	setInterval(moveCube2,1000);
+	setInterval(moveCube3,1000);
+	setInterval(moveCube4,1000);
+	setInterval(moveCube5,1000);
+	setInterval(moveCube6,1000);
+	setInterval(moveCube7,1000);
+	setInterval(moveCube8,1000);
+	setInterval(moveCube9,1000);
+	setInterval(moveCube10,1000);
+	setInterval(moveCube11,1000);
+	setInterval(moveCube12,1000);
+	setInterval(moveCube13,1000);
+	setTimeout(ent,9000)
+</script>
+</body>
+</html>
+
